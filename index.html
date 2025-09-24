@@ -879,16 +879,20 @@
             document.querySelectorAll('.especial-content').forEach(function(div) {
                 div.style.display = 'none';
             });
-            // Oculta todos los contenidos normales
-            document.querySelectorAll('.content:not(.especial-content)').forEach(function(div) {
-                div.classList.remove('active');
-            });
-            // Muestra solo el contenido correspondiente
             const content = document.getElementById(id);
-            if (content) {
-                content.classList.add('active');
-            } else {
+            if (!content) {
                 console.error('Elemento con ID no encontrado:', id);
+                return;
+            }
+            // Si ya está visible, lo ocultamos (toggle)
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+            } else {
+                // Oculta todos los normales
+                document.querySelectorAll('.content:not(.especial-content)').forEach(function(div) {
+                    div.classList.remove('active');
+                });
+                content.classList.add('active');
             }
         }
 
