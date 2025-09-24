@@ -12,12 +12,23 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
+            max-width: 900px;
+            margin: 0 auto 0 auto;
             background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px 32px 32px 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+        }
+        .topbar-inner {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 18px 8px 10px 8px;
+        }
+        .topbar-space {
+            height: 32px;
         }
         h1 {
             color: #004d99;
@@ -81,14 +92,158 @@
         p {
             line-height: 1.6;
         }
+        /* Estilos para los botones de la barra superior */
+        .topbar-btn {
+            border: none;
+            border-radius: 8px;
+            padding: 13px 22px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 0;
+            outline: none;
+            box-shadow: 0 1px 6px #005baa22;
+            transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+        }
+        .btn-codigo {
+            background: #005baa;
+            color: #fff;
+        }
+        .btn-codigo:hover, .btn-codigo:focus {
+            background: #003f7d;
+        }
+        .btn-yape {
+            background: #43a047;
+            color: #fff;
+        }
+        .btn-yape:hover, .btn-yape:focus {
+            background: #2e7031;
+        }
+        .btn-bcp {
+            background: #ffe082;
+            color: #333;
+        }
+        .btn-bcp:hover, .btn-bcp:focus {
+            background: #ffd54f;
+            color: #222;
+        }
+        .btn-comprobante {
+            background: #e53935;
+            color: #fff;
+        }
+        .btn-comprobante:hover, .btn-comprobante:focus {
+            background: #b71c1c;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            background: #fff;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            padding: 4px 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 1px 4px #0001;
+            transition: background 0.15s, border 0.15s;
+            z-index: 2;
+        }
+        .copy-btn:hover {
+            background: #e3f2fd;
+            border-color: #1976d2;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Barra superior fija con botones de acceso rápido -->
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <button class="topbar-btn btn-codigo" onclick="mostrarContenidoEspecial('codigo')">Envío de Código</button>
+            <button class="topbar-btn btn-yape" onclick="mostrarContenidoEspecial('yape')">Pago por YAPE</button>
+            <button class="topbar-btn btn-bcp" onclick="mostrarContenidoEspecial('bcp')">Pasos BCP</button>
+            <button class="topbar-btn btn-comprobante" onclick="mostrarContenidoEspecial('comprobante')">Envío Comprobante</button>
+        </div>
+    </nav>
+    <div class="topbar-space"></div>
     <div class="container">
-        <h1>Opciones de la Universidad César Vallejo</h1>
+        <h1>Universidad César Vallejo</h1>
+        <div id="codigo" class="content especial-content" style="display:none; position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('codigo')" title="Copiar contenido">📋</button>
+            <h2>¡Bienvenido(a) a la Universidad César Vallejo!</h2>
+            <p>Es un gusto saludarte y darte la más cordial bienvenida al programa XXXXXXXXXXXX – Sede Chiclayo.<br>
+            A continuación, te comparto tu información de inscripción:</p>
+            <ul>
+                <li><b>Código de estudiante:</b> 7003063269</li>
+                <li><b>Monto de inscripción:</b> S/. 100.00</li>
+            </ul>
+            <p>Este pago es el primer paso para iniciar oficialmente tu proceso académico.</p>
+            <ul>
+                <li><b>Carrera:</b> IXXXXXXXXXXXX</li>
+            </ul>
+            <b>Costos Académicos</b>
+            <ul>
+                <li>Matrícula por ciclo: S/. 300.00</li>
+                <li>Costo del ciclo regular: S/. 000000.00 (Distribuido en 5 cuotas de S/. 000.00)</li>
+            </ul>
+            <p><b>Importante:</b> Los costos no son fijos ni congelados.</p>
+            <b>Requisitos para tu matrícula</b>
+            <ul>
+                <li>Copia de DNI vigente</li>
+                <li>Fotografía tamaño carné o captura digital</li>
+                <li>Certificado original de estudios secundarios</li>
+                <li>Certificados de egresados de II.EE. no escolarizadas deben estar visados por DRE o UGEL.</li>
+                <li>Tener más de 24 años</li>
+                <li>CV documentado con al menos 3 años de experiencia laboral</li>
+                <li>No se consideran prácticas como experiencia laboral</li>
+            </ul>
+        </div>
+        <div id="yape" class="content especial-content" style="display:none; position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('yape')" title="Copiar contenido">📋</button>
+            <h2>MEDIOS DE PAGO - PASOS YAPE</h2>
+            <ol>
+                <li>Yapear servicios.</li>
+                <li>Escribes CESAR. Clic en logo UCV.</li>
+                <li>Seleccionar la cuenta según tu sede.<br>
+                    (Pensión- Matrícula - Tru olivo / Pensión- Matrícula Otros)</li>
+                <li>Ingresar el código del alumno. ¡Listo!</li>
+                <li>Verifica que el monto sea S/. 100.00 y que esté a nombre del alumno</li>
+            </ol>
+            <p>Video aquí:<br>
+            <a href="https://www.youtube.com/shorts/HcXPtRtSOvk" target="_blank">https://www.youtube.com/shorts/HcXPtRtSOvk</a></p>
+        </div>
+        <div id="bcp" class="content especial-content" style="display:none; position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('bcp')" title="Copiar contenido">📋</button>
+            <h2>PASOS APLICATIVO BCP</h2>
+            <ol>
+                <li>En la plataforma seleccionar pagar servicios.</li>
+                <li>Busca una empresa - Universidad Cesar Vallejo.</li>
+                <li>Seleccionar la cuenta según tu sede.<br>
+                    ● Para CAMPUS TRUJILLO-LOS OLIVOS: Universidad Cesar Vallejo Tru - Olivos (4TA OPCIÓN)<br>
+                    ● Para OTRO CAMPUS: Universidad Cesar Vallejo (1RA OPCIÓN)</li>
+                <li>Matrícula y Pensiones.</li>
+                <li>Ingresar el código del alumno.</li>
+                <li>Selecciona tu matrícula y pensiones.</li>
+                <li>Válida tu token. ¡Listo!</li>
+            </ol>
+            <p>Video aquí:<br>
+            <a href="https://www.youtube.com/watch?v=cMCamZZ3nv8" target="_blank">https://www.youtube.com/watch?v=cMCamZZ3nv8</a></p>
+        </div>
+        <div id="comprobante" class="content especial-content" style="display:none; position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('comprobante')" title="Copiar contenido">📋</button>
+            <h2>PASOS PARA EL ENVÍO DEL COMPROBANTE</h2>
+            <ol>
+                <li>Envíe un mensaje a través de WhatsApp N.º 12024342 para activar el BOT “Salvador”.</li>
+                <li>Nuestro BOT Salvador te pedirá que ingrese su nombre.</li>
+                <li>Salvador le mostrará varias opciones, elegir la opción 2 (soy parte de la familia vallejiana).</li>
+                <li>El BOT solicitará que ingrese su código de estudiante (código de inscripción).</li>
+                <li>Espere el saludo del asesor (esto puede tardar varios minutos). Una vez recibido el saludo, podrá enviar la captura de pantalla de su pago.</li>
+            </ol>
+        </div>
 
         <button class="section-button" onclick="toggleContent('pregradoPresencial')">PREGRADO PRESENCIAL</button>
-        <div id="pregradoPresencial" class="content">
+        <div id="pregradoPresencial" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('pregradoPresencial')" title="Copiar contenido">📋</button>
             <p>¡Buenas tardes! ✨ Te saluda Yarickza Flores y estoy encantada de acompañarte en este emocionante camino hacia tu éxito profesional 🙌🏼</p>
             <p>Te presento el método para tu ingreso a la Universidad César Vallejo (UCV), una universidad licenciada por SUNEDU, con modalidad de pregrado presencial.</p>
             <p>🕘 Clases 100% presenciales de lunes a viernes – ¡Perfectas para una formación completa y dinámica!</p>
@@ -146,7 +301,8 @@
         </div>
 
         <button class="section-button" onclick="toggleContent('pregradoDistancia')">PREGRADO DISTANCIA</button>
-        <div id="pregradoDistancia" class="content">
+        <div id="pregradoDistancia" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('pregradoDistancia')" title="Copiar contenido">📋</button>
             <p>¡Buenas tardes! ✨ Te saluda Yarickza Flores y estoy encantada de acompañarte en este emocionante camino hacia tu éxito profesional 🙌🏼</p>
             <p>Quiero presentarte las opciones de ingreso a la Universidad César Vallejo (UCV), una institución licenciada por SUNEDU, que ofrece la carrera de Pregrado a Distancia, ideal para quienes buscan flexibilidad y educación de calidad desde cualquier lugar. 🌎📚</p>
             
@@ -192,20 +348,18 @@
             <p>Saludos cordiales,</p>
         </div>
 
-        <button class="section-button" onclick="toggleContent('pregradoSemipresencial')">PREGRADO SEMIPRES UCV FLEX</button>
-        <div id="pregradoSemipresencial" class="content">
+        <button class="section-button" onclick="toggleContent('pregradoSemipresencial')">PREGRADO SEMIPRESENCIAL UCV FLEX</button>
+        <div id="pregradoSemipresencial" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('pregradoSemipresencial')" title="Copiar contenido">📋</button>
             <p>¡Buenas tardes! ✨ Te saluda Yarickza Flores 😊 y estoy encantada de acompañarte en este gran paso hacia tu desarrollo profesional 🙌🏼. Te presento las modalidades de ingreso al Pregrado Semipresencial FLEX de la Universidad César Vallejo (UCV), universidad licenciada por SUNEDU, ideal para quienes buscan una formación flexible con clases presenciales planificadas.</p>
-            
             <h3>Modalidades de Ingreso</h3>
             <ul>
                 <li>👉🏻 Examen de admisión: 26 de octubre</li>
                 <li>👉🏻 Programa Alfa Flex: Inicio: XXX</li>
             </ul>
-
             <h3>Examen de Admisión – Pregrado FLEX</h3>
             <p>Incluye entrevista personal y examen de conocimientos.</p>
             <p><strong>💰 Inscripción:</strong> S/. 100.00</p>
-            
             <h3>Modalidad y Horarios de clases</h3>
             <p>🗓️ Modalidad: 70% virtual y 30% presencial (Transversal)</p>
             <p>📌 Horarios de clases:</p>
@@ -223,8 +377,7 @@
                     </ul>
                 </li>
             </ul>
-            <p>🔰 El curso de Inglés se llevará entre semana (virtual).</p>
-
+            <p>� El curso de Inglés se llevará entre semana (virtual).</p>
             <h3>Pagos luego del ingreso:</h3>
             <ul>
                 <li>Matrícula por ciclo: S/. 300.00</li>
@@ -233,7 +386,6 @@
                 <li>Costo del ciclo regular: S/. 2,000.00 (en 5 cuotas de S/. 400.00)*</li>
             </ul>
             <p class="note">*Las pensiones pueden variar.</p>
-
             <h3>Programa Alfa Flex:</h3>
             <p>La matrícula tiene un costo de S/. 350.00, que puedes pagar en 2 cuotas:</p>
             <ul>
@@ -241,16 +393,14 @@
                 <li>2da cuota: S/. 200.00</li>
             </ul>
             <p>🎉 Si te inscribes HOY MISMO y pagas la matrícula al contado, solo pagarás S/. 300.00 con descuento.</p>
-
             <h3>Pagos luego del ingreso por Programa Alfa (CAT B):</h3>
             <ul>
-                <li>🆓 Matrícula 1er ciclo: S/. 0.00</li>
+                <li>� Matrícula 1er ciclo: S/. 0.00</li>
                 <li>👉🏻 Costo del ciclo por ingreso Alfa: CAT B S/.2250.00 (pago en 5 cuotas de S/ 450.00)</li>
                 <li>👉🏻 Costo del ciclo por ingreso Alfa: CAT B S/.1750.00 (pago en 5 cuotas de S/ 350.00)</li>
             </ul>
             <p class="note">📌 CAT B: Ingreso por Programa Alfa</p>
-            <p>🚨 Modalidad de ingreso por orden de mérito.</p>
-
+            <p>� Modalidad de ingreso por orden de mérito.</p>
             <h3>Requisitos para postular:</h3>
             <ul>
                 <li>✅ Copia de DNI vigente o carné de extranjería</li>
@@ -261,18 +411,16 @@
             <p>Quedo atenta a cualquier consulta o si deseas iniciar tu proceso de inscripción. 📩 Estoy aquí para ayudarte. ✨ ¡Vamos por tu futuro profesional! 💪🏼🎓</p>
             <p>Saludos cordiales,</p>
         </div>
-
         <button class="section-button" onclick="toggleContent('subeSemipresencial')">SUBE SEMIPRESENCIAL</button>
-        <div id="subeSemipresencial" class="content">
+        <div id="subeSemipresencial" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('subeSemipresencial')" title="Copiar contenido">📋</button>
             <p>¡Buenas tardes! ✨ Te saluda Yarickza Flores 😊 y estoy encantada de compartir contigo una excelente oportunidad para continuar con tu formación académica: el Programa SUBE – Modalidad Semipresencial de la Universidad César Vallejo (UCV).</p>
             <p>Este programa está dirigido a personas mayores de 24 años que deseen iniciar una carrera profesional universitaria y cumplan con los requisitos establecidos. La modalidad es semipresencial, ideal para quienes trabajan o tienen otras responsabilidades.</p>
-            
             <h3>📌 Modalidad de ingreso</h3>
             <ul>
                 <li>✅ Evaluación de conocimientos 26 de octubre + entrevista</li>
                 <li>✅ Evaluación de CV documentado o declaración jurada</li>
             </ul>
-
             <h3>🕒 Horarios de clases (cursos modulares):</h3>
             <ul>
                 <li>📍 Sábados (presencial): 1:30 p. m. – 10:30 p. m.</li>
@@ -283,37 +431,43 @@
                     </ul>
                 </li>
             </ul>
-
-            <h3>💰 Inversión para postular</h3>
-            <ul>
-                <li>Inscripción: S/. 100.00</li>
-            </ul>
-            
-            <h3>💰 Inversión académica (una vez ingreses)</h3>
+            <p>� El curso de Inglés se llevará entre semana (virtual).</p>
+            <h3>Pagos luego del ingreso:</h3>
             <ul>
                 <li>Matrícula por ciclo: S/. 300.00</li>
                 <li>Costo del ciclo regular: S/. 2,750.00 (en 5 cuotas de S/. 550.00)*</li>
                 <li>Costo del ciclo regular: S/. 2,250.00 (en 5 cuotas de S/. 450.00)*</li>
                 <li>Costo del ciclo regular: S/. 2,000.00 (en 5 cuotas de S/. 400.00)*</li>
             </ul>
-            <p class="note">⚠️ Los costos no son fijos ni congelados</p>
-
-            <h3>📄 Requisitos</h3>
+            <p class="note">*Las pensiones pueden variar.</p>
+            <h3>Programa Alfa Flex:</h3>
+            <p>La matrícula tiene un costo de S/. 350.00, que puedes pagar en 2 cuotas:</p>
             <ul>
-                <li>✅ Copia de DNI vigente</li>
+                <li>1ra cuota: S/. 150.00</li>
+                <li>2da cuota: S/. 200.00</li>
+            </ul>
+            <p>🎉 Si te inscribes HOY MISMO y pagas la matrícula al contado, solo pagarás S/. 300.00 con descuento.</p>
+            <h3>Pagos luego del ingreso por Programa Alfa (CAT B):</h3>
+            <ul>
+                <li>� Matrícula 1er ciclo: S/. 0.00</li>
+                <li>👉🏻 Costo del ciclo por ingreso Alfa: CAT B S/.2250.00 (pago en 5 cuotas de S/ 450.00)</li>
+                <li>👉🏻 Costo del ciclo por ingreso Alfa: CAT B S/.1750.00 (pago en 5 cuotas de S/ 350.00)</li>
+            </ul>
+            <p class="note">📌 CAT B: Ingreso por Programa Alfa</p>
+            <p>� Modalidad de ingreso por orden de mérito.</p>
+            <h3>Requisitos para postular:</h3>
+            <ul>
+                <li>✅ Copia de DNI vigente o carné de extranjería</li>
                 <li>✅ Fotografía digital (fondo blanco)</li>
                 <li>✅ Certificado original de estudios secundarios*</li>
-                <li>✅ Ser mayor de 24 años</li>
-                <li>✅ CV documentado con mínimo 3 años de experiencia laboral (no se consideran prácticas)</li>
             </ul>
-            <p>📌 Certificados de egresados de II.EE. no escolarizadas deben estar visados por DRE o UGEL</p>
-            <p>📩 Si deseas más información o iniciar tu proceso de inscripción, solo responde este correo. Estoy aquí para ayudarte.</p>
-            <p>✨ ¡Vamos por tu futuro profesional!</p>
+            <p class="note">*Si egresaste de una I.E. no escolarizada, debe estar visado por DRE o UGEL.</p>
+            <p>Quedo atenta a cualquier consulta o si deseas iniciar tu proceso de inscripción. 📩 Estoy aquí para ayudarte. ✨ ¡Vamos por tu futuro profesional! 💪🏼🎓</p>
             <p>Saludos cordiales,</p>
         </div>
-
         <button class="section-button" onclick="toggleContent('subeDistancia')">SUBE DISTANCIA</button>
-        <div id="subeDistancia" class="content">
+        <div id="subeDistancia" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('subeDistancia')" title="Copiar contenido">📋</button>
             <p>Buenas tardes, Te saluda Yarickza Flores 😊 y estoy encantada de compartir contigo una excelente oportunidad para continuar con tu formación académica: el Programa SUBE – Modalidad a Distancia de la Universidad César Vallejo (UCV).</p>
             <p>Este programa está dirigido a personas mayores de 24 años que deseen iniciar una carrera profesional universitaria y que cumplan con los requisitos establecidos. La modalidad es 100% a distancia, ideal para quienes trabajan o tienen responsabilidades personales.</p>
             
@@ -348,15 +502,15 @@
                 <li>✅ Copia de DNI vigente</li>
                 <li>✅ Fotografía tamaño carné (imagen digital)</li>
                 <li>✅ Certificado original de estudios secundarios*</li>
-                <li>✅ Ser mayor de 24 años</li>
-                <li>✅ CV documentado que acredite mínimo 3 años de experiencia laboral (no se consideran prácticas profesionales)</li>
             </ul>
-            <p>En caso de egresar de II.EE. no escolarizadas, los certificados deben estar visados por la DRE o UGEL</p>
-            <p>📩 Quedo atenta a cualquier consulta o si deseas iniciar tu proceso de inscripción. Estoy aquí para ayudarte. ✨ ¡Vamos por tu futuro profesional! Saludos cordiales,</p>
+            <p>📌 Los certificados de egresados de II.EE. no escolarizadas deben estar visados por la DRE o UGEL correspondiente.</p>
+            <p>📩 Quedo atenta a cualquier consulta o si deseas iniciar tu proceso de inscripción. Estoy aquí para ayudarte. ✨ ¡Vamos por tu futuro profesional! 💪🏼🎓</p>
+            <p>Saludos cordiales,</p>
         </div>
 
         <button class="section-button" onclick="toggleContent('maestriaSemipresencial')">MAESTRÍA SEMIPRESENCIAL</button>
-        <div id="maestriaSemipresencial" class="content">
+        <div id="maestriaSemipresencial" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('maestriaSemipresencial')" title="Copiar contenido">📋</button>
             <p>Buenas tardes, Te saluda Yarickza Flores y me complace compartir contigo una gran oportunidad para tu desarrollo profesional: la Maestría en modalidad Semipresencial en la Escuela de Posgrado de la Universidad César Vallejo (UCV).</p>
             <p>Estudiar un Posgrado UCV te permitirá lograr mayores oportunidades para el futuro que deseas. ✨</p>
 
@@ -414,7 +568,8 @@
         </div>
         
         <button class="section-button" onclick="toggleContent('doctoradoSemipresencial')">DOCTORADO SEMIPRESENCIAL</button>
-        <div id="doctoradoSemipresencial" class="content">
+        <div id="doctoradoSemipresencial" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('doctoradoSemipresencial')" title="Copiar contenido">📋</button>
             <p>Buenas tardes, Te saluda Yarickza Flores y me alegra compartir contigo una excelente oportunidad para seguir avanzando en tu trayectoria profesional: el Doctorado en la Escuela de Posgrado de la Universidad César Vallejo (UCV).</p>
             <p>Estudiar un Posgrado UCV te abrirá mayores oportunidades para el futuro que deseas. ✨</p>
 
@@ -472,7 +627,8 @@
         </div>
 
         <button class="section-button" onclick="toggleContent('maestriaDistancia')">MAESTRÍA DISTANCIA</button>
-        <div id="maestriaDistancia" class="content">
+        <div id="maestriaDistancia" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('maestriaDistancia')" title="Copiar contenido">📋</button>
             <p>Buenas tardes, Te saluda Yarickza Flores y me complace presentarte una excelente oportunidad para continuar creciendo profesionalmente: la Maestría en modalidad a distancia de la Universidad César Vallejo (UCV).</p>
             <p>Estudiar en Posgrado UCV te permitirá acceder a mayores oportunidades laborales y académicas con una formación flexible y de alta calidad.</p>
 
@@ -505,26 +661,33 @@
             <h3>📄 Requisitos para postular</h3>
             <ul>
                 <li>✅ Copia simple del DNI o carné de extranjería</li>
-                <li>✅ Fotografía digital, fondo blanco</li>
+                <li>✅ Fotografía digital a color, fondo blanco</li>
                 <li>✅ Copia del grado de bachiller visado por la universidad de origen o constancia de inscripción SUNEDU</li>
             </ul>
 
-            <h3>💰 Inversión para postular</h3>
+            <h3>💰 Inversión Académica – Maestría</h3>
+            <p><strong>NUEVOS POSGRADO</strong></p>
             <ul>
-                <li>Inscripción: S/. 100.00</li>
+                <li>Matrícula por ciclo: S/. 200.00</li>
+                <li>Costo del ciclo regular: S/. 4,200.00 (Distribuido en 6 cuotas de S/. 700.00)</li>
             </ul>
-
-            <h3>💰 Inversión académica – Maestría</h3>
+            <p><strong>TIPO B</strong></p>
             <ul>
-                <li>👉 Matrícula por ciclo: S/. 250.00</li>
-                <li>👉 Costo del ciclo regular: S/. 2,100.00 (Pago en 6 cuotas de S/. 350.00)</li>
+                <li>Matrícula por ciclo: S/. 200.00</li>
+                <li>Costo del ciclo regular: S/. 4,500.00 (Distribuido en 6 cuotas de S/. 750.00)</li>
             </ul>
-            <p class="note">📌 Las pensiones pueden variar con el tiempo</p>
-            <p>¿Te gustaría iniciar tu proceso de inscripción o resolver alguna duda? Responde a este correo y con gusto te apoyaré en todo el proceso 📩 ¡Vamos por tu desarrollo profesional! 💪🏼 Saludos cordiales,</p>
+            <p><strong>TIPO A</strong></p>
+            <ul>
+                <li>Matrícula por ciclo: S/. 200.00</li>
+                <li>Costo del ciclo regular: S/. 4,800.00 (Distribuido en 6 cuotas de S/. 800.00)</li>
+            </ul>
+            <p class="note">📌 Las pensiones están sujetas a variación</p>
+            <p>¿Te gustaría iniciar tu proceso de inscripción o necesitas más información? Responde a este correo y con gusto te orientaré en cada paso 📩 ¡Vamos por tu desarrollo profesional! 💪🏼 Saludos cordiales,</p>
         </div>
         
         <button class="section-button" onclick="toggleContent('doctoradoDistancia')">DOCTORADO DISTANCIA</button>
-        <div id="doctoradoDistancia" class="content">
+        <div id="doctoradoDistancia" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('doctoradoDistancia')" title="Copiar contenido">📋</button>
             <p>Buenas tardes, Te saluda Yarickza Flores y me complace compartir contigo una gran oportunidad para tu crecimiento profesional y académico: el Doctorado en modalidad a distancia en la Escuela de Posgrado de la Universidad César Vallejo (UCV).</p>
             <p>Estudiar en Posgrado UCV te permitirá alcanzar nuevos niveles en tu formación, con una modalidad flexible y adaptada a tus tiempos.</p>
 
@@ -580,7 +743,8 @@
         </div>
 
         <button class="section-button" onclick="toggleContent('segundaEspecialidad')">SEGUNDA ESPECIALIDAD</button>
-        <div id="segundaEspecialidad" class="content">
+        <div id="segundaEspecialidad" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('segundaEspecialidad')" title="Copiar contenido">📋</button>
             <p>¡Buenas tardes! Te saluda Yarickza Flores, de la Escuela de Posgrado UCV, para compartirte una gran oportunidad de crecimiento académico: la Segunda Especialidad a Distancia.</p>
             <p>Estudiar una segunda especialidad te permitirá potenciar tus competencias, desarrollar habilidades específicas y ampliar tu campo laboral, tanto en el sector público como privado. 🚀</p>
 
@@ -642,7 +806,8 @@
         </div>
 
         <button class="section-button" onclick="toggleContent('tallerTitulacion')">TALLER DE TITULACIÓN</button>
-        <div id="tallerTitulacion" class="content">
+        <div id="tallerTitulacion" class="content" style="position:relative;">
+            <button class="copy-btn" onclick="copiarContenido('tallerTitulacion')" title="Copiar contenido">📋</button>
             <p>Buenas tardes, Soy Yarickza Flores, de la Escuela de Posgrado de la Universidad César Vallejo, y quiero presentarte el Taller de Titulación, una excelente opción para que finalices tu etapa universitaria y obtengas tu título profesional.</p>
             
             <h3>🎯 ¿A quién está dirigido?</h3>
@@ -696,13 +861,49 @@
     </div>
 
     <script>
+        // Mostrar solo un contenido especial a la vez
+        function mostrarContenidoEspecial(id) {
+            document.querySelectorAll('.especial-content').forEach(function(div) {
+                div.style.display = 'none';
+            });
+            var el = document.getElementById(id);
+            if (el) el.style.display = 'block';
+            // Oculta los contenidos normales
+            document.querySelectorAll('.content:not(.especial-content)').forEach(function(div) {
+                div.classList.remove('active');
+            });
+        }
+        // Mantiene la función original para los otros botones
         function toggleContent(id) {
+            // Oculta los especiales
+            document.querySelectorAll('.especial-content').forEach(function(div) {
+                div.style.display = 'none';
+            });
+            // Oculta todos los contenidos normales
+            document.querySelectorAll('.content:not(.especial-content)').forEach(function(div) {
+                div.classList.remove('active');
+            });
+            // Muestra solo el contenido correspondiente
             const content = document.getElementById(id);
             if (content) {
-                content.classList.toggle('active');
+                content.classList.add('active');
             } else {
                 console.error('Elemento con ID no encontrado:', id);
             }
+        }
+
+        function copiarContenido(id) {
+            var div = document.getElementById(id);
+            if (!div) return;
+            // Clona el nodo y elimina el botón de copiar
+            var clone = div.cloneNode(true);
+            var btn = clone.querySelector('.copy-btn');
+            if (btn) btn.remove();
+            // Obtiene solo el texto plano conservando saltos de línea
+            var temp = document.createElement('div');
+            temp.appendChild(clone);
+            var text = temp.innerText || temp.textContent;
+            navigator.clipboard.writeText(text.trim());
         }
     </script>
 </body>
