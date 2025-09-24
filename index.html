@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones de la Universidad César Vallejo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e0e0e0; /* Gris claro, neutro */
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #004d99;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section-button {
+            width: 100%;
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        /* Colores diferentes para cada botón */
+        .section-button:nth-of-type(1) { background-color: #1976d2; }
+        .section-button:nth-of-type(2) { background-color: #388e3c; }
+        .section-button:nth-of-type(3) { background-color: #fbc02d; color: #333; }
+        .section-button:nth-of-type(4) { background-color: #d32f2f; }
+        .section-button:nth-of-type(5) { background-color: #7b1fa2; }
+        .section-button:nth-of-type(6) { background-color: #0288d1; }
+        .section-button:nth-of-type(7) { background-color: #c2185b; }
+        .section-button:nth-of-type(8) { background-color: #009688; }
+        .section-button:nth-of-type(9) { background-color: #ffa000; color: #333; }
+        .section-button:nth-of-type(10) { background-color: #455a64; }
+        .section-button:nth-of-type(11) { background-color: #5d4037; }
+        .section-button:hover {
+            filter: brightness(0.9);
+        }
+        .content {
+            padding: 20px;
+            border-left: 3px solid #007bff;
+            margin-bottom: 20px;
+            background-color: #e9f5ff;
+            display: none; /* Oculta el contenido por defecto */
+        }
+        .content.active {
+            display: block; /* Muestra el contenido cuando tiene la clase 'active' */
+        }
+        h2, h3 {
+            color: #0056b3;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .note {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Opciones de la Universidad César Vallejo</h1>
+
+        <button class="section-button" onclick="toggleContent('pregradoPresencial')">PREGRADO PRESENCIAL</button>
+        <div id="pregradoPresencial" class="content">
+            <p>¡Buenas tardes! ✨ Te saluda Yarickza Flores y estoy encantada de acompañarte en este emocionante camino hacia tu éxito profesional 🙌🏼</p>
+            <p>Te presento el método para tu ingreso a la Universidad César Vallejo (UCV), una universidad licenciada por SUNEDU, con modalidad de pregrado presencial.</p>
+            <p>🕘 Clases 100% presenciales de lunes a viernes – ¡Perfectas para una formación completa y dinámica!</p>
+            
+            <h3>🚀 Modalidades de Ingreso</h3>
+            <ul>
+                <li>👉🏻 Examen de admisión: 26 de Octubre</li>
+                <li>👉🏻 Programa Alfa Ultra: Inicio: xxx</li>
+            </ul>
+            
+            <h3>📝 Examen de Admisión + Entrevista</h3>
+            <p><strong>💰 Inversión para postular:</strong></p>
+            <ul>
+                <li>Inscripción: S/. 100.00</li>
+            </ul>
+            <p>📌 Una vez que ingreses a la universidad:</p>
+            <ul>
+                <li>Matrícula por ciclo: S/. 300.00</li>
+                <li>Costo del ciclo regular: S/. 2,750.00 (en 5 cuotas de S/. 550.00)*</li>
+                <li>Costo del ciclo regular: S/. 2,250.00 (en 5 cuotas de S/. 450.00)*</li>
+                <li>Costo del ciclo regular: S/. 2,000.00 (en 5 cuotas de S/. 400.00)*</li>
+            </ul>
+            <p class="note">📌 Nota: Las pensiones pueden variar con el tiempo</p>
+
+            <h3>🌟 Programa Alfa Ultra + Entrevista</h3>
+            <p><strong>💡 Matrícula del programa:</strong> S/. 350.00 (2 cuotas: S/. 150 y la segunda de S/. 200.00)</p>
+            <p>Sin embargo, si realizas tu inscripción HOY MISMO y cancela al contado su matrícula, te brindamos un descuento y pagarías solo S/. 300.</p>
+            <p><strong>💰 Inversión universitaria:</strong></p>
+            <ul>
+                <li>Matrícula por ciclo: S/. 300.00</li>
+                <li>Costo del ciclo regular: S/. 2,750.00 (en 5 cuotas de S/. 550.00)*</li>
+                <li>Costo del ciclo regular: S/. 2,250.00 (en 5 cuotas de S/. 450.00)*</li>
+                <li>Costo del ciclo regular: S/. 2,000.00 (en 5 cuotas de S/. 400.00)*</li>
+            </ul>
+            <p class="note">*Las pensiones pueden variar en el transcurso del tiempo.</p>
+
+            <h3>🎯 Ingreso Alfa – CAT B:</h3>
+            <ul>
+                <li>🆓 Matrícula 1er ciclo: S/. 0.00</li>
+                <li>👉🏻 Costo del ciclo por ingreso Alfa: CAT B S/.2250.00 (pago en 5 cuotas de S/ 450.00)</li>
+                <li>👉🏻 Costo del ciclo por ingreso Alfa: CAT B S/.1750.00 (pago en 5 cuotas de S/ 350.00)</li>
+            </ul>
+            <p class="note">📌 Nota: Las pensiones pueden variar con el tiempo</p>
+            
+            <h3>📑 Requisitos para postular</h3>
+            <ul>
+                <li>✅ Copia de DNI vigente o carné de extranjería</li>
+                <li>✅ Captura de imagen fotográfica</li>
+                <li>✅ Certificado original de estudios secundarios</li>
+            </ul>
+            <p>⚠️ Egresados de II.EE. no escolarizadas deben presentar certificados visados por la DRE o UGEL.</p>
+            <p>Estoy aquí para apoyarte en cada paso. Si tienes alguna pregunta o deseas iniciar tu inscripción, no dudes en responder este correo o escribirme directamente.</p>
+            <p>¡Vamos con todo hacía tu futuro profesional! 💪🏼🎓</p>
+            <p>Saludos cordiales,</p>
+        </div>
+
+        <button class="section-button" onclick="toggleContent('pregradoDistancia')">PREGRADO DISTANCIA</button>
+        <div id="pregradoDistancia" class="content">
+            <p>¡Buenas tardes! ✨ Te saluda Yarickza Flores y estoy encantada de acompañarte en este emocionante camino hacia tu éxito profesional 🙌🏼</p>
+            <p>Quiero presentarte las opciones de ingreso a la Universidad César Vallejo (UCV), una institución licenciada por SUNEDU, que ofrece la carrera de Pregrado a Distancia, ideal para quienes buscan flexibilidad y educación de calidad desde cualquier lugar. 🌎📚</p>
+            
+            <h3>🚀 Modalidades de Ingreso</h3>
+            <ul>
+                <li>👉🏻 Examen de Admisión: 26 de Octubre</li>
+                <li>👉🏻 Programa Alfa Ultra: Inicio: XXX</li>
+            </ul>
+            
+            <h3>📝 Examen de Admisión</h3>
+            <p><strong>💰 Inscripción:</strong> S/. 100.00</p>
+            <p>Una vez ingreses, realizarás los siguientes pagos:</p>
+            <ul>
+                <li>📌 Matrícula por ciclo: S/. 250.00</li>
+                <li>💼 Costo del ciclo regular: S/. 1,500.00 (Distribuido en 5 cuotas de S/. 300.00)</li>
+            </ul>
+            
+            <h3>🎯 Programa Alfa Ultra</h3>
+            <ul>
+                <li>📌 Matrícula del programa: S/. 350.00 (Dividida en 2 cuotas: S/. 150.00 y S/. 200.00)</li>
+                <li>🆓 Matrícula 1er ciclo: S/. 0.00</li>
+                <li>💼 Costo del ciclo regular: S/. 1,500.00 (Distribuido en 5 cuotas de S/. 300.00)</li>
+            </ul>
+            <p>Sin embargo, si realizas tu inscripción HOY MISMO y cancela al contado su matrícula, te brindamos un descuento y pagarías solo S/. 300.</p>
+            
+            <h3>⏰ Horarios de clases</h3>
+            <p>📚 Las clases se desarrollan los siguientes días:</p>
+            <ul>
+                <li>🗓️ Martes, miércoles y viernes</li>
+                <li>🕕 De 6:00 p. m. a 11:00 p. m.</li>
+            </ul>
+            <p>👩‍🏫 Además, se incluye 2 horas de asesoría extracurricular para reforzar tu aprendizaje.</p>
+
+            <h3>📄 Requisitos para Pregrado a Distancia</h3>
+            <ul>
+                <li>✅ Copia de DNI vigente o carné de extranjería</li>
+                <li>✅ Fotografía digital (fondo blanco)</li>
+                <li>✅ Certificado original de estudios secundarios</li>
+            </ul>
+            <p>📌 Los certificados de egresados de II.EE. no escolarizadas deben estar visados por la DRE o UGEL correspondiente.</p>
+            <p>Si deseas más información o iniciar tu proceso de inscripción, solo responde a este correo. Estoy para ayudarte en cada paso del camino 📩✨</p>
+            <p>¡Vamos con todo hacía tu futuro profesional! 💪🏼🎓</p>
+            <p>Saludos cordiales,</p>
+        </div>
+
+        <button class="section-button" onclick="toggleContent('pregradoSemipresencial')">PREGRADO SEMIPRES UCV FLEX</button>
+        <div id="pregradoSemipresencial" class="content">
+            <p>¡Buenas tardes! ✨ Te saluda Yarickza Flores 😊 y estoy encantada de acompañarte en este gran paso hacia tu desarrollo profesional 🙌🏼. Te presento las modalidades de ingreso al Pregrado Semipresencial FLEX de la Universidad César Vallejo (UCV), universidad licenciada por SUNEDU, ideal para quienes buscan una formación flexible con clases presenciales planificadas.</p>
+            
+            <h3>Modalidades de Ingreso</h3>
+            <ul>
+                <li>👉🏻 Examen de admisión: 26 de octubre</li>
+                <li>👉🏻 Programa Alfa Flex: Inicio: XXX</li>
+            </ul>
+
+            <h3>Examen de Admisión – Pregrado FLEX</h3>
+            <p>Incluye entrevista personal y examen de conocimientos.</p>
+            <p><strong>💰 Inscripción:</strong> S/. 100.00</p>
+            
+            <h3>Modalidad y Horarios de clases</h3>
+            <p>🗓️ Modalidad: 70% virtual y 30% presencial (Transversal)</p>
+            <p>📌 Horarios de clases:</p>
+            <ul>
+                <li>Sábados presenciales:
+                    <ul>
+                        <li>1.º curso: 7:30 a. m. – 11:00 a. m.</li>
+                        <li>2.º curso: 1:30 p. m. – 5:20 p. m.</li>
+                        <li>3.º curso: 5:30 p. m. – 9:00 p. m.</li>
+                    </ul>
+                </li>
+                <li>Domingos virtuales:
+                    <ul>
+                        <li>8:30 a. m. – 9:00 p. m</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>🔰 El curso de Inglés se llevará entre semana (virtual).</p>
+
+            <h3>Pagos luego del ingreso:</h3>
+            <ul>
+                <li>Matrícula por ciclo: S/. 300.00</li>
+                <li>Costo del ciclo regular: S/. 2,750.00 (en 5 cuotas de S/. 550.00)*</li>
+                <li>Costo del ciclo regular: S/. 2,250.00 (en 5 cuotas de S/. 450.00)*</li>
+                <li>Costo del ciclo regular: S/. 2,000.00 (en 5 cuotas de S/. 400.00)*</li>
+            </ul>
+            <p class="note">*Las pensiones pueden variar.</p>
+
+            <h3>Programa Alfa Flex:</h3>
+            <p>La matrícula tiene un costo de S/. 350.00, que puedes pagar en 2 cuotas:</p>
+            <ul>
+                <li>1ra cuota: S/. 150.00</li>
+                <li>2da cuota: S/. 200.00</li>
+            </ul>
+            <p>🎉 Si te inscribes HOY MISMO y pagas la matrícula al contado, solo pagarás S/. 300.00 con descuento.</p>
+
+            <h3>Pagos luego del ingreso por Programa Alfa (CAT B):</h3>
+            <ul>
+                <li>🆓 Matrícula 1er ciclo: S/. 0.00</li>
+                <li>👉🏻 Costo del ciclo por ingreso Alfa: CAT B S/.2250.00 (pago en 5 cuotas de S/ 450.00)</li>
+                <li>👉🏻 Costo del ciclo por ingreso Alfa: CAT B S/.1750.00 (pago en 5 cuotas de S/ 350.00)</li>
+            </ul>
+            <p class="note">📌 CAT B: Ingreso por Programa Alfa</p>
+            <p>🚨 Modalidad de ingreso por orden de mérito.</p>
+
+            <h3>Requisitos para postular:</h3>
+            <ul>
+                <li>✅ Copia de DNI vigente o carné de extranjería</li>
+                <li>✅ Fotografía digital (fondo blanco)</li>
+                <li>✅ Certificado original de estudios secundarios*</li>
+            </ul>
+            <p class="note">*Si egresaste de una I.E. no escolarizada, debe estar visado por DRE o UGEL.</p>
+            <p>Quedo atenta a cualquier consulta o si deseas iniciar tu proceso de inscripción. 📩 Estoy aquí para ayudarte. ✨ ¡Vamos por tu futuro profesional! 💪🏼🎓</p>
+            <p>Saludos cordiales,</p>
+        </div>
+
+        <button class="section-button" onclick="toggleContent('subeSemipresencial')">SUBE SEMIPRESENCIAL</button>
+        <div id="subeSemipresencial" class="content">
+            <p>¡Buenas tardes! ✨ Te saluda Yarickza Flores 😊 y estoy encantada de compartir contigo una excelente oportunidad para continuar con tu formación académica: el Programa SUBE – Modalidad Semipresencial de la Universidad César Vallejo (UCV).</p>
+            <p>Este programa está dirigido a personas mayores de 24 años que deseen iniciar una carrera profesional universitaria y cumplan con los requisitos establecidos. La modalidad es semipresencial, ideal para quienes trabajan o tienen otras responsabilidades.</p>
+            
+            <h3>📌 Modalidad de ingreso</h3>
+            <ul>
+                <li>✅ Evaluación de conocimientos 26 de octubre + entrevista</li>
+                <li>✅ Evaluación de CV documentado o declaración jurada</li>
+            </ul>
+
+            <h3>🕒 Horarios de clases (cursos modulares):</h3>
+            <ul>
+                <li>📍 Sábados (presencial): 1:30 p. m. – 10:30 p. m.</li>
+                <li>📍 Domingos (virtual):
+                    <ul>
+                        <li>8:00 a. m. – 1:00 p. m.</li>
+                        <li>3:00 p. m. – 8:00 p. m.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>💰 Inversión para postular</h3>
+            <ul>
+                <li>Inscripción: S/. 100.00</li>
+            </ul>
+            
+            <h3>💰 Inversión académica (una vez ingreses)</h3>
+            <ul>
+                <li>Matrícula por ciclo: S/. 300.00</li>
+                <li>Costo del ciclo regular: S/. 2,750.00 (en 5 cuotas de S/. 550.00)*</li>
+                <li>Costo del ciclo regular: S/. 2,250.00 (en 5 cuotas de S/. 450.00)*</li>
+                <li>Costo del ciclo regular: S/. 2,000.00 (en 5 cuotas de S/. 400.00)*</li>
+            </ul>
+            <p class="note">⚠️ Los costos no son fijos ni congelados</p>
+
+            <h3>📄 Requisitos</h3>
+            <ul>
+                <li>✅ Copia de DNI vigente</li>
+                <li>✅ Fotografía digital (fondo blanco)</li>
+                <li>✅ Certificado original de estudios secundarios*</li>
+                <li>✅ Ser mayor de 24 años</li>
+                <li>✅ CV documentado con mínimo 3 años de experiencia laboral (no se consideran prácticas)</li>
+            </ul>
+            <p>📌 Certificados de egresados de II.EE. no escolarizadas deben estar visados por DRE o UGEL</p>
+            <p>📩 Si deseas más información o iniciar tu proceso de inscripción, solo responde este correo. Estoy aquí para ayudarte.</p>
+            <p>✨ ¡Vamos por tu futuro profesional!</p>
+            <p>Saludos cordiales,</p>
+        </div>
+
+        <button class="section-button" onclick="toggleContent('subeDistancia')">SUBE DISTANCIA</button>
+        <div id="subeDistancia" class="content">
+            <p>Buenas tardes, Te saluda Yarickza Flores 😊 y estoy encantada de compartir contigo una excelente oportunidad para continuar con tu formación académica: el Programa SUBE – Modalidad a Distancia de la Universidad César Vallejo (UCV).</p>
+            <p>Este programa está dirigido a personas mayores de 24 años que deseen iniciar una carrera profesional universitaria y que cumplan con los requisitos establecidos. La modalidad es 100% a distancia, ideal para quienes trabajan o tienen responsabilidades personales.</p>
+            
+            <h3>📌 Modalidad de Ingreso</h3>
+            <ul>
+                <li>✅ Evaluación de conocimientos 26 de octubre + entrevista</li>
+                <li>✅ Evaluación de CV documentado o declaración jurada</li>
+            </ul>
+
+            <h3>🕒 Horarios (cursos modulares):</h3>
+            <ul>
+                <li>💻 Sábados: 1:30 p.m. a 10:00 p.m.</li>
+                <li>💻 Domingos: 7:30 a.m. a 12:40 p.m.</li>
+                <li>💻 Cursos transversales (Inglés y Estadística): domingos de 4:00 p.m. a 10:30 p.m.</li>
+            </ul>
+            <p>📍 Modalidad 100% distancia sincrónica</p>
+
+            <h3>💰 Inversión para postular:</h3>
+            <ul>
+                <li>Inscripción: S/. 100.00</li>
+            </ul>
+            
+            <h3>💰 Inversión universitaria (una vez ingreses):</h3>
+            <ul>
+                <li>👉Matrícula por ciclo: S/. 250.00</li>
+                <li>👉🏻 Costo del ciclo regular: S/. 1,500.00 (en 5 cuotas de S/. 300.00)</li>
+            </ul>
+            <p class="note">Los costos no son fijos ni congelados</p>
+            
+            <h3>📄 Requisitos:</h3>
+            <ul>
+                <li>✅ Copia de DNI vigente</li>
+                <li>✅ Fotografía tamaño carné (imagen digital)</li>
+                <li>✅ Certificado original de estudios secundarios*</li>
+                <li>✅ Ser mayor de 24 años</li>
+                <li>✅ CV documentado que acredite mínimo 3 años de experiencia laboral (no se consideran prácticas profesionales)</li>
+            </ul>
+            <p>En caso de egresar de II.EE. no escolarizadas, los certificados deben estar visados por la DRE o UGEL</p>
+            <p>📩 Quedo atenta a cualquier consulta o si deseas iniciar tu proceso de inscripción. Estoy aquí para ayudarte. ✨ ¡Vamos por tu futuro profesional! Saludos cordiales,</p>
+        </div>
+
+        <button class="section-button" onclick="toggleContent('maestriaSemipresencial')">MAESTRÍA SEMIPRESENCIAL</button>
+        <div id="maestriaSemipresencial" class="content">
+            <p>Buenas tardes, Te saluda Yarickza Flores y me complace compartir contigo una gran oportunidad para tu desarrollo profesional: la Maestría en modalidad Semipresencial en la Escuela de Posgrado de la Universidad César Vallejo (UCV).</p>
+            <p>Estudiar un Posgrado UCV te permitirá lograr mayores oportunidades para el futuro que deseas. ✨</p>
+
+            <h3>📚 Modalidad Semipresencial</h3>
+            <p>La programación académica se organiza en:</p>
+            <ul>
+                <li>70% virtual (actividades sincrónicas y asincrónicas)</li>
+                <li>30% presencial (3 sesiones distribuidas en el semestre)</li>
+            </ul>
+
+            <h3>🗓️ Sobre las sesiones presenciales:</h3>
+            <ul>
+                <li>Una sesión será en un fin de semana completo (viernes, sábado y domingo)</li>
+                <li>Dos sesiones serán en fines de semana de dos días (sábado y domingo)</li>
+                <li>Las fechas se visualizan en la ficha de matrícula o se informan al inicio del ciclo</li>
+            </ul>
+            <ul>
+                <li>✅ Al culminar, tu modalidad de estudios figurará en tu grado académico</li>
+                <li>✅ Es indispensable contar con conocimientos de inglés (puedes rendir examen de suficiencia si ya lo dominas)</li>
+                <li>✅ Duración: 1 año</li>
+                <li>✅ Proceso de admisión incluye:
+                    <ul>
+                        <li>Entrevista personal</li>
+                        <li>Examen de conocimientos</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>📅 Examen de admisión:</strong> 26 de octubre</p>
+
+            <h3>📄 Requisitos para postular</h3>
+            <ul>
+                <li>✅ Copia simple del DNI o carné de extranjería</li>
+                <li>✅ Fotografía digital a color, fondo blanco</li>
+                <li>✅ Copia del grado de bachiller visado por la universidad de origen o constancia de inscripción SUNEDU</li>
+            </ul>
+
+            <h3>💰 Inversión Académica – Maestría</h3>
+            <p><strong>NUEVOS POSGRADO</strong></p>
+            <ul>
+                <li>Matrícula por ciclo: S/. 200.00</li>
+                <li>Costo del ciclo regular: S/. 4,200.00 (Distribuido en 6 cuotas de S/. 700.00)</li>
+            </ul>
+            <p><strong>TIPO B</strong></p>
+            <ul>
+                <li>Matrícula por ciclo: S/. 200.00</li>
+                <li>Costo del ciclo regular: S/. 4,500.00 (Distribuido en 6 cuotas de S/. 750.00)</li>
+            </ul>
+            <p><strong>TIPO A</strong></p>
+            <ul>
+                <li>Matrícula por ciclo: S/. 200.00</li>
+                <li>Costo del ciclo regular: S/. 4,800.00 (Distribuido en 6 cuotas de S/. 800.00)</li>
+            </ul>
+            <p class="note">📌 Las pensiones están sujetas a variación</p>
+            <p>¿Te gustaría iniciar tu proceso de inscripción o necesitas más información? Responde a este correo y con gusto te orientaré en cada paso 📩 ¡Vamos por tu desarrollo profesional! 💪🏼 Saludos cordiales,</p>
+        </div>
+        
+        <button class="section-button" onclick="toggleContent('doctoradoSemipresencial')">DOCTORADO SEMIPRESENCIAL</button>
+        <div id="doctoradoSemipresencial" class="content">
+            <p>Buenas tardes, Te saluda Yarickza Flores y me alegra compartir contigo una excelente oportunidad para seguir avanzando en tu trayectoria profesional: el Doctorado en la Escuela de Posgrado de la Universidad César Vallejo (UCV).</p>
+            <p>Estudiar un Posgrado UCV te abrirá mayores oportunidades para el futuro que deseas. ✨</p>
+
+            <h3>📚 Modalidad de estudio semipresencial</h3>
+            <ul>
+                <li>Una semana asistirás solo un día (sábado)</li>
+                <li>En dos fines de semana asistirás durante dos días consecutivos (sábado y domingo)</li>
+            </ul>
+            <p>🔸 Los horarios y fechas presenciales estarán detallados en tu ficha de matrícula</p>
+            <p>🔸 Las actividades académicas inician los lunes y concluyen los domingos</p>
+            
+            <h3>✅ Las actividades sincrónicas con el docente se desarrollan en los siguientes horarios:</h3>
+            <ul>
+                <li>🔸 Videoconferencia expositiva (90 min): miércoles o jueves desde las 7:00 p. m.</li>
+                <li>🔸 Videoconferencia de asesoramiento (135 min): sábados entre 8:00 a. m. y 1:00 p. m. o entre 3:00 p. m. y 8:00 p. m.</li>
+            </ul>
+            <p>👉 Todas las videoconferencias son grabadas para que puedas revisarlas luego</p>
+            
+            <h3>👉 Las evaluaciones se organizan de esta manera:</h3>
+            <ul>
+                <li>Control de lectura: semanal, disponible de lunes a miércoles</li>
+                <li>Evaluación parcial: segunda semana (solo domingos)</li>
+                <li>Evaluación final: cuarta o última semana (solo domingos)</li>
+            </ul>
+            
+            <h3>📄 Requisitos para postular al Doctorado</h3>
+            <ul>
+                <li>✅ Copia simple del DNI o carné de extranjería</li>
+                <li>✅ Fotografía digital a color, fondo blanco</li>
+                <li>✅ Impresión de la constancia SUNEDU del grado de maestría</li>
+                <li>✅ Propuesta de plan o proyecto de investigación (previo al examen de admisión)</li>
+                <li>✅ Dos cartas de recomendación que cuenten con el grado de doctor.</li>
+            </ul>
+            
+            <h3>📝 Proceso de Admisión</h3>
+            <p>La evaluación de admisión es virtual, dura 1 hora y comprende:</p>
+            <ul>
+                <li>✅ Entrevista personal</li>
+                <li>✅ Examen de conocimientos</li>
+            </ul>
+            <p><strong>📅 Fecha del examen de admisión:</strong> 26 de octubre</p>
+            
+            <h3>💰 Inversión para postular</h3>
+            <ul>
+                <li>Inscripción: S/. 100.00</li>
+            </ul>
+            
+            <h3>💰 Inversión académica – Doctorado</h3>
+            <ul>
+                <li>Matrícula por ciclo: S/. 250.00</li>
+                <li>Costo del ciclo regular: S/. 3,750.00 (Distribuido en 5 cuotas de S/. 750.00)</li>
+            </ul>
+            <p class="note">📌 Las pensiones pueden variar en el transcurso del tiempo</p>
+            <p>¿Te gustaría iniciar tu proceso de inscripción o necesitas más información? Responde a este correo y estaré encantada de ayudarte 📩 ¡Vamos por tu desarrollo profesional! 💪🏼 Saludos cordiales,</p>
+        </div>
+
+        <button class="section-button" onclick="toggleContent('maestriaDistancia')">MAESTRÍA DISTANCIA</button>
+        <div id="maestriaDistancia" class="content">
+            <p>Buenas tardes, Te saluda Yarickza Flores y me complace presentarte una excelente oportunidad para continuar creciendo profesionalmente: la Maestría en modalidad a distancia de la Universidad César Vallejo (UCV).</p>
+            <p>Estudiar en Posgrado UCV te permitirá acceder a mayores oportunidades laborales y académicas con una formación flexible y de alta calidad.</p>
+
+            <h3>🔸 Modalidad a Distancia</h3>
+            <ul>
+                <li>✅ Se inicia con una videoconferencia introductoria el primer día de clases a las 7:00 p. m., donde se explicará la ruta de aprendizaje y actividades semanales.</li>
+                <li>✅ Las actividades académicas comienzan los lunes y concluyen los domingos.</li>
+                <li>✅ Los trabajos deben ser enviados hasta las 11:59 p. m. del día domingo.</li>
+            </ul>
+            <p>👉 Las clases combinan sesiones sincrónicas (en tiempo real) y asincrónicas (a tu ritmo).</p>
+
+            <h3>🔸 Sesiones sincrónicas (con docente en tiempo real):</h3>
+            <ul>
+                <li>👉 Miércoles y jueves o viernes desde las 7:00 p. m. (videoconferencia de 112 min cursos modulares y 90 min cursos de investigación transversal)</li>
+                <li>👉 Sábados entre 8:00 a. m. y 1:00 p. m. o de 2:00 p. m. a 8:00 p. m. (asesorías – 135 min)</li>
+            </ul>
+            <ul>
+                <li>✅ Al finalizar tu maestría, la modalidad de estudio figurará en tu grado académico.</li>
+                <li>✅ Es necesario tener conocimientos del idioma inglés. Si ya cuentas con ellos, puedes rendir un examen de suficiencia.</li>
+            </ul>
+
+            <h3>📝 Proceso de Admisión</h3>
+            <p>La evaluación de admisión es virtual, dura 1 hora y comprende:</p>
+            <ul>
+                <li>✅ Entrevista personal</li>
+                <li>✅ Examen de conocimientos</li>
+            </ul>
+            <p><strong>📅 Fecha del examen de admisión:</strong> 26 de octubre</p>
+
+            <h3>📄 Requisitos para postular</h3>
+            <ul>
+                <li>✅ Copia simple del DNI o carné de extranjería</li>
+                <li>✅ Fotografía digital, fondo blanco</li>
+                <li>✅ Copia del grado de bachiller visado por la universidad de origen o constancia de inscripción SUNEDU</li>
+            </ul>
+
+            <h3>💰 Inversión para postular</h3>
+            <ul>
+                <li>Inscripción: S/. 100.00</li>
+            </ul>
+
+            <h3>💰 Inversión académica – Maestría</h3>
+            <ul>
+                <li>👉 Matrícula por ciclo: S/. 250.00</li>
+                <li>👉 Costo del ciclo regular: S/. 2,100.00 (Pago en 6 cuotas de S/. 350.00)</li>
+            </ul>
+            <p class="note">📌 Las pensiones pueden variar con el tiempo</p>
+            <p>¿Te gustaría iniciar tu proceso de inscripción o resolver alguna duda? Responde a este correo y con gusto te apoyaré en todo el proceso 📩 ¡Vamos por tu desarrollo profesional! 💪🏼 Saludos cordiales,</p>
+        </div>
+        
+        <button class="section-button" onclick="toggleContent('doctoradoDistancia')">DOCTORADO DISTANCIA</button>
+        <div id="doctoradoDistancia" class="content">
+            <p>Buenas tardes, Te saluda Yarickza Flores y me complace compartir contigo una gran oportunidad para tu crecimiento profesional y académico: el Doctorado en modalidad a distancia en la Escuela de Posgrado de la Universidad César Vallejo (UCV).</p>
+            <p>Estudiar en Posgrado UCV te permitirá alcanzar nuevos niveles en tu formación, con una modalidad flexible y adaptada a tus tiempos.</p>
+
+            <h3>🔸 Modalidad a Distancia</h3>
+            <ul>
+                <li>✅ Iniciarás con una videoconferencia introductoria el primer día de clases a las 7:00 p. m., donde conocerás la ruta de aprendizaje y las actividades académicas semanales.</li>
+                <li>✅ Las clases se desarrollan desde el lunes hasta el domingo.</li>
+                <li>✅ Los trabajos académicos deben enviarse hasta las 11:59 p. m. del domingo.</li>
+                <li>👉 Tendrás acceso a sesiones sincrónicas (en tiempo real) y asincrónicas (a tu ritmo).</li>
+            </ul>
+            
+            <h3>🔸 Sesiones sincrónicas con docentes:</h3>
+            <ul>
+                <li>👉 Miércoles o jueves desde las 7:00 p. m. (videoconferencias de 90 minutos)</li>
+                <li>👉 Sábados entre 8:00 a. m. – 1:00 p. m. o 3:00 p. m. – 8:00 p. m. (asesorías – 135 minutos)</li>
+                <li>👉 Todas las sesiones quedan grabadas para su revisión posterior.</li>
+            </ul>
+            <ul>
+                <li>✅ Al culminar, tu modalidad de estudios figurará en el grado de doctor que obtengas.</li>
+                <li>✅ Es necesario contar con 2 idiomas</li>
+            </ul>
+
+            <h3>📝Proceso de admisión virtual</h3>
+            <p>▪ Duración: 1 hora</p>
+            <p>▪ Incluye:</p>
+            <ul>
+                <li>✅ Entrevista personal</li>
+                <li>✅ Examen de conocimientos</li>
+            </ul>
+            <p><strong>📅 Examen de admisión:</strong> 26 de octubre</p>
+
+            <h3>📄 Requisitos para postular al Doctorado</h3>
+            <ul>
+                <li>✅ Copia simple del DNI o carné de extranjería</li>
+                <li>✅ Fotografía digital a color, fondo blanco</li>
+                <li>✅ Impresión de la inscripción SUNEDU del grado de maestría</li>
+                <li>✅ Propuesta de plan o proyecto de investigación (previa al examen)</li>
+                <li>✅ Dos cartas de recomendación de profesionales con grado de doctor</li>
+            </ul>
+            
+            <h3>💰 Inversión para postular</h3>
+            <ul>
+                <li>Inscripción: S/. 100.00</li>
+            </ul>
+
+            <h3>💰 Inversión académica – Doctorado</h3>
+            <ul>
+                <li>👉 Matrícula por ciclo: S/. 250.00</li>
+                <li>👉 Costo del ciclo regular: S/. 2,500.00 (Distribuido en 5 cuotas de S/. 500.00)</li>
+            </ul>
+            <p class="note">📌 Las pensiones pueden estar sujetas a variación</p>
+            <p>¿Deseas más información o iniciar tu inscripción? Solo responde a este correo y estaré encantada de ayudarte 📩 ¡Vamos por tu desarrollo profesional! 💪🏼 Saludos cordiales,</p>
+        </div>
+
+        <button class="section-button" onclick="toggleContent('segundaEspecialidad')">SEGUNDA ESPECIALIDAD</button>
+        <div id="segundaEspecialidad" class="content">
+            <p>¡Buenas tardes! Te saluda Yarickza Flores, de la Escuela de Posgrado UCV, para compartirte una gran oportunidad de crecimiento académico: la Segunda Especialidad a Distancia.</p>
+            <p>Estudiar una segunda especialidad te permitirá potenciar tus competencias, desarrollar habilidades específicas y ampliar tu campo laboral, tanto en el sector público como privado. 🚀</p>
+
+            <h3>📌 Sobre el programa</h3>
+            <ul>
+                <li>💻 Modalidad: 100 % virtual</li>
+                <li>🕐 Duración: 1 año (2 semestres)</li>
+                <li>📚 Plan curricular: 40 créditos</li>
+            </ul>
+
+            <h3>🎯 Especialidades disponibles</h3>
+            <ul>
+                <li>📘 Docencia del inglés como lengua extranjera</li>
+                <li>🏃‍♂️ Educación física y deporte</li>
+                <li>🧠 Neuroeducación</li>
+                <li>🌐 Entornos virtuales para el aprendizaje</li>
+                <li>👶 Desarrollo del talento en la primera infancia</li>
+                <li>🏛️ Políticas educativas y gestión pública</li>
+                <li>🔎 Didáctica de la investigación en entornos virtuales</li>
+                <li>💡 Innovación educativa y mentalidad emprendedora</li>
+                <li>🤝 Atención a la diversidad e inclusión educativa</li>
+            </ul>
+
+            <h3>📝 Metodología y admisión</h3>
+            <ul>
+                <li>✅ Entrevista personal programada por tu asesor académico</li>
+            </ul>
+
+            <h3>📄 Requisitos para postular</h3>
+            <ul>
+                <li>🆔 Copia del DNI vigente o carné de extranjería</li>
+                <li>📷 Fotografía digital tamaño carné (fondo blanco, formato JPG)</li>
+                <li>🎓 Constancia de inscripción del título universitario en SUNEDU o</li>
+                <li>📑 Título pedagógico fedateado por la GRE/UGEL o legalizado por notario</li>
+            </ul>
+
+            <h3>💰 Inversión para postular</h3>
+            <ul>
+                <li>📝 Inscripción: S/. 100.00</li>
+            </ul>
+            <p>Una vez admitido, realizarás los siguientes pagos:</p>
+
+            <h3>💳 Inversión académica</h3>
+            <ul>
+                <li>📘 Matrícula por ciclo: S/. 250.00</li>
+                <li>💵 Costo del programa: S/. 1,250.00 (en 5 cuotas de S/. 250.00)</li>
+                <li>📘 Matrícula por ciclo: S/. 250.00</li>
+                <li>💵 Costo del programa: S/. 1,750.00 (en 5 cuotas de S/. 350.00)</li>
+                <li>🎓 Carpeta de grados (titulación): S/. 1,000.00</li>
+            </ul>
+            
+            <h3>🎁 Beneficios</h3>
+            <ul>
+                <li>🏅 Título des segunda especialidad con alta valorización profesional</li>
+                <li>🌎 Docentes nacionales e internacionales</li>
+                <li>🧩 Metodología flexible con tecnología educativa y enfoque práctico</li>
+            </ul>
+            <p>¿Te gustaría más información o deseas iniciar tu inscripción? Responde a este correo y estaré encantada de ayudarte 📩 💪🏼 ¡Vamos por tu desarrollo profesional! Saludos cordiales,</p>
+        </div>
+
+        <button class="section-button" onclick="toggleContent('tallerTitulacion')">TALLER DE TITULACIÓN</button>
+        <div id="tallerTitulacion" class="content">
+            <p>Buenas tardes, Soy Yarickza Flores, de la Escuela de Posgrado de la Universidad César Vallejo, y quiero presentarte el Taller de Titulación, una excelente opción para que finalices tu etapa universitaria y obtengas tu título profesional.</p>
+            
+            <h3>🎯 ¿A quién está dirigido?</h3>
+            <p>Este programa está dirigido a bachilleres de universidades con licencia denegada, brindando un proceso ágil, académico y flexible.</p>
+
+            <h3>📚 Modalidad:</h3>
+            <p>100 % virtual, con clases sincrónicas y asincrónicas a través de nuestras plataformas institucionales.</p>
+            
+            <h3>🗓️ Duración del taller:</h3>
+            <p>📆 El Programa de Titulación tiene una duración total de 20 semanas (5 meses).</p>
+            <p>🎓 Inicio de clases: Entre el 4 y 5 de octubre (el área académica te asignará el horario)</p>
+
+            <h3>📝 Evaluación de ingreso:</h3>
+            <p>Para ingresar deberás rendir una evaluación de competencias investigativas, de manera virtual, con una duración de 2 horas.</p>
+            <p>👉🏻 Fecha de evaluación: 2 de octubre.</p>
+            <p>📧 Los resultados se enviarán a tu correo 24 horas después.</p>
+
+            <h3>💳 Inversión inicial:</h3>
+            <ul>
+                <li>Inscripción: S/. 100.00</li>
+            </ul>
+
+            <h3>💰 Inversión total del programa:</h3>
+            <ul>
+                <li>👉 Matrícula por ciclo: S/. 250.00</li>
+                <li>👉 Costo del taller: S/. 2,800.00 (en 4 cuotas de S/. 700.00)</li>
+                <li>🔸 La primera cuota debe pagarse antes del examen de competencias</li>
+                <li>👉 Sustentación de tesis: S/. 1,000.00</li>
+                <li>👉 Carpeta de titulación: S/. 2,000.00</li>
+            </ul>
+            
+            <h3>📄 Requisitos para postular:</h3>
+            <ul>
+                <li>✅ Copia de DNI vigente o carné de extranjería</li>
+                <li>✅ Impresión de verificación SUNEDU del grado de bachiller</li>
+                <li>✅ Declaración jurada de postulación</li>
+                <li>✅ Pago de inscripción, matrícula y primera cuota</li>
+                <li>✅ Constancia de 1.ª matrícula (solo si no aparece en SUNEDU)</li>
+                <li>✅ Constancia de egreso (solo si no aparece en SUNEDU)</li>
+            </ul>
+
+            <h3>🎁 Beneficios:</h3>
+            <ul>
+                <li>Asesoría especializada y acompañamiento constante</li>
+                <li>Plataforma académica moderna y flexible</li>
+                <li>Evaluaciones semanales para medir tu progreso</li>
+                <li>Tesis terminada y lista para sustentar</li>
+            </ul>
+            <p>¿Deseas más información o empezar tu proceso de inscripción? 📩 Responde este correo y con gusto te apoyaré en cada paso. 💪🏼 ¡Vamos por tu título profesional! Saludos cordiales,</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                content.classList.toggle('active');
+            } else {
+                console.error('Elemento con ID no encontrado:', id);
+            }
+        }
+    </script>
+</body>
+</html>
